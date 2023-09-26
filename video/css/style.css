@@ -54,3 +54,33 @@ footer{
     height: 300px;
     background-color: #acaaa9;
 }
+
+@media (max-width:640px){
+
+    h1{
+        font-size: 18vw;
+    }
+    .video-wrapper{
+        flex-direction: column-reverse;
+    }
+    .video-wrapper:nth-of-type(2){
+        flex-direction: column-reverse;
+    }
+    .video-box{
+        width: 100%;
+        height: 50vh;
+        position: static;
+    }
+    .txt-box{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .txt-box>h2{
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    .txt-box>p{
+        line-height: 1.5;
+    }
+
+}
