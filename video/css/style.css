@@ -11,7 +11,7 @@ header{
 }
 h1{
     font-family: 'Dela Gothic One', cursive;
-    font-size: 280px;
+    font-size: 16vw;
     background: url(../img/header.gif) no-repeat center center/cover;
     background-clip: text;/* 文字の形でクリッピングされる */
     -webkit-background-clip: text;/* chrome用 */
