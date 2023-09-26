@@ -1,0 +1,148 @@
+@use "_reset.scss";
+
+
+header{
+    text-align: center;
+    padding: 30px 0;
+}
+h1{
+    width: 72px;
+    margin: 0 auto 20px;
+}
+header>p{
+    font-size: 22px;
+}
+.g-nav{
+    background-color: #3ca110;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+}
+.g-nav>ul{
+    display: flex;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+.g-nav li{
+    width: 25%;
+}
+.g-nav a{
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    border-right: 1px solid #FFF;
+    color: #fff;
+}
+.g-nav li:first-of-type>a{
+    border-left: 1px solid #fff;
+}
+.g-nav a:hover{
+    background-color: #14a169;
+}
+
+.wrapper{
+    display: flex;
+    max-width: 960px;
+    margin: 0 auto 50px;
+    justify-content: space-between;
+}
+main{
+    width: 60%;
+}
+aside{
+    width: 34%;
+}
+h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+main p:first-of-type{
+    margin-bottom: 40px;
+}
+h3{
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+h4{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+main img{
+    margin-bottom: 20px;
+}
+main p{/* ??? */
+    margin-bottom: 200px;
+}
+aside>img{
+    margin-bottom: 20px;
+}
+footer{
+    width: 100%;
+    background-color: #a16c10;
+    padding-bottom: 20px;
+}
+footer>p{
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+}
+.sns{
+    display: flex;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.sns>li{
+    width: 44px;
+    margin-right: 20px;
+}
+
+
+/* 960px以下の時 */
+@media (max-width:960px){
+    .wrapper{
+        padding: 0 20px;
+    }
+    .g-nav li:first-of-type>a{
+        border-left: 0
+    }
+    .g-nav li:last-of-type>a{
+        border-right: 0
+    }
+}
+.wrapper,.sns{
+    padding: 0 10px;
+}
+
+/* 640px以下の時 */
+@media (max-width:640px){
+    .wrapper,.sns{/* ,(カンマ)の意味 ”と”という意味 */
+        display: block;
+    }
+    main{
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
+.g-nav{
+    height: 88px;
+}
+.g-nav>ul{
+    flex-wrap: wrap;
+}
+.g-nav li{
+    width: 50%;
+    height: 44px;
+}
+.g-nav a{
+    line-height: 44px;
+}
+.g-nav li:nth-of-type(2)>a{
+    border-right: 0;
+}
+.g-nav li:nth-of-type(n+3)>a{
+    display: block;
+    border-top: 1px solid #FFF;
+}
+}
