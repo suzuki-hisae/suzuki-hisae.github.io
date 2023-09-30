@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            vertical-align: bottom;
+            max-width: 100%;
+        }
+        .main-visual{
+            max-width: 960px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-visual">
+        <picture>
+            <source media="(min-width:641px)" srcset="img/main-visual.jpg 960w" sizes="100vw">
+            <source media="(max-width:640px)" srcset="img/sp.jpg 640w" sizes="100vw">
+            <img src="img/sp.jpg" alt="">
+        </picture>
+        <!-- <img src="img/main-visual.jpg" alt=""> -->
+    </div>
+</body>
+</html>

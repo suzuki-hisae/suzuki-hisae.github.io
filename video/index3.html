@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>srcsetによる画像の切り替え</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            vertical-align: bottom;
+            max-width: 100%;
+        }
+        .main-visual{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-visual">
+        <picture>
+            <source media="(min-width:961px)" srcset="img/01.jpg 1200w" sizes="100vw">
+            <source media="(min-width:601px)" srcset="img/02.jpg 960w" sizes="100vw">
+            <source media="(max-width:600px)" srcset="img/03.jpg 600w" sizes="100vw">
+            <img src="img/03.jpg" alt="">
+        </picture>
+    </div>
+</body>
+</html>
