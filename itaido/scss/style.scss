@@ -1,0 +1,331 @@
+//パーシャルファイルを呼び出す
+@use "reset";
+@use "color";
+@use "font";
+
+//ブレイクポイントを登録（sassの変数はローカル）
+$tab_point:960px;
+$sp_point:640px;
+$ssp_point:480px;
+
+//メディアクエリを登録（@mixinを使用）
+@mixin tab{
+    @media (max-width:$tab_point){
+        @content;
+    }
+}
+@mixin sp{
+    @media (max-width:$sp_point){
+        @content;
+    }
+}
+@mixin ssp{
+    @media (max-width:$ssp_point){
+        @content;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: var(--color_1);
+    display: flex;
+    min-width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    align-items: center;
+    .logo{
+        margin-left: 160px;
+        >img{
+            width: 130px;
+            height: 130px;
+            border-radius: 20px;
+        }
+    }
+    >h1{
+        font-size: 42px;
+        font-family: var(--font_ja);
+        letter-spacing: 10px;
+        >span{
+            font-size: 16px;
+            margin: 0 40px;
+            letter-spacing: 2px;
+        }
+    }
+}
+.yoyaku{
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 4;
+    width: 180px;
+    height: 100px;
+    border-radius: 9999px;
+    background-color: #FFF;
+    color: var(--color_1);
+    border: 2px solid var(--color_1);
+    font-weight: bold;
+    font-size: 20px;
+}
+#g-nav{
+    max-width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    margin: 0 auto;
+    background-color: #FFF;
+    ul{
+        width: 960px;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        li{
+            width: calc(100% / 7);
+            text-align: center;
+
+            a{
+                display: block;
+                line-height: 50px;
+                color: var(--txt_color);
+            }
+            a:hover{
+                background-color: var(--color_2);
+                transition: 0.5s;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+
+
+
+.main-visual{
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 150px;
+}
+.main-visual li{
+width: 100%;
+height: 100vh;
+    }
+    .main-visual img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    }
+.tag{
+    position: absolute;/* bodyが基準点 */
+    top: 280px;
+    left: 160px;
+    background-color: var(--color_4);/* 7-8桁目が不透明度の設定 */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1;
+    padding: 36px 40px;
+    border-radius: 24px;
+    .tag-line{
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 10px;
+    }
+}
+.onayami{
+    margin-bottom: 150px;
+    .onayami-box{
+    >h2{
+        margin: 50px 0;
+        text-align: center;
+        font-size: 46px;
+    }
+    >p{
+        width: 600px;
+        text-align: center;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: var(--color_4);
+        border-radius: 99999px;
+        font-size: 24px;
+    }
+    }
+    .yajirusi{
+        margin: 30px auto 50px;
+        >p{
+            text-align: center;
+            >img{
+            width: 100px;
+            height: 100px;
+            }
+        }
+    }
+    /*少しずらしたボックス*/
+    .omakase{
+    width: 600px;
+    margin: 0 auto;
+    padding:2em;/*内側の余白*/
+    background: none;/*元のボックス背景色なし*/
+    border:1px solid #ccc ;/*線の太さ・種類・色*/
+    position: relative;/*配置（基準）*/
+    text-align: center;
+    &>:after{
+        background-color:#fabcbc;/*ずらしたボックスの背景色*/
+        border:none;
+        content: '';
+        position: absolute;/*配置（ここを動かす）*/
+        top: 7px;/*上から7pxずらす*/
+        left: 7px;/*左から7pxずらす*/
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        }
+    >p{
+        font-size: 36px;
+        font-weight: bold;
+    }
+    }
+}
+#menu{
+    .menu-wrapper{
+        width: 60%;
+        columns: 2;/* レスポンシブで変えるのがラク スマホの時は1にすればOK htmlの高さは入れない*/
+        margin: 0 auto 100px;
+        column-gap: 40px;/* 列と列の間の隙間 */
+        .menu-box{
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: var(--color_2);
+            border-radius: 20px;
+            >h3{
+                font-size: 24px;
+                text-align: center;
+            }
+            >img{
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+                display: block;
+            }
+            >p{
+                margin: 10px ;
+            }
+            >button{
+                padding: 10px 20px;
+                background-color: #FFF;
+                border: 2px solid var(--txt_color);
+                border-radius: 12px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+}
+#time{
+    margin: 20px auto 150px;
+    text-align: center;
+    h2{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+.biz-hour {
+    display: block;
+    border-collapse: collapse;
+
+    /* overflow-x: scroll;で、
+    スマホ画面幅に表が入りきらない場合は
+    横スクロールしてくれます */
+    /* overflow-x: scroll; */
+  }
+  
+  .biz-hour th {
+    /* １番上の線 */
+    /* #A28C63っていうのが色の名前なので、ここをお好みで */
+    border-top: 1px solid #A28C63;
+  }
+  
+  .biz-hour th, .biz-hour td {
+    padding: 10px 20px;
+    text-align: center;
+    /* ２番目以降の線 */
+    /* 色はお好みで */
+    border-bottom: 1px solid #A28C63;
+  }
+  
+  /* スマホ時に横スクロールしないよう、横の余白（padding）を20px→10pxに */
+  @media screen and (max-width: 559px) {
+    .biz-hour th, .biz-hour td {
+      padding: 10px 10px;
+    }
+  }
+  
+  .biz-hour th {
+    font-weight: normal;
+  }
+  
+  /* 「土」の文字色 */
+  .biz-hour th.sat {
+    color: #3db2da;
+  }
+  
+  /* 「日」の文字色 */
+  .biz-hour th.sun {
+    color: #e66a6a;
+  }
+
+.news-box{
+    max-width: 600px;
+    display: block;
+    margin: 0 auto 150px;
+    padding: 20px;
+    >h2{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .news-list{
+        display: flex;
+        flex-wrap: wrap;
+        dt{
+            width: 20%;
+            margin-bottom: 10px;
+        }
+        dd{
+            width: 80%;
+            margin-bottom: 10px;
+            >a:hover{
+                text-decoration: underline;
+                color: #4b620d;
+            }
+        }
+    }
+}
+
+#access{
+    max-width: 960px;
+    margin: 0 auto ;
+    h2{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .access-wrapper{
+
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.photo{
+    margin: 0 auto;
+}
+
+footer{
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    background-color: var(--color_1);
+}

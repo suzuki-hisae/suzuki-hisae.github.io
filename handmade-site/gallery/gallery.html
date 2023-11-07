@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ダーニング刺繡 よこなみ工房｜Galleryページ</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/vegas.css">
+    <link rel="stylesheet" href="../css/hamburgers.css">
+    <link rel=”icon” href=“../img/favicon.ico”>
+</head>
+<body>
+    <header>
+        <div class="header-box">
+            <div class="logo">
+                <a href="#"><img src="../img/logo.JPG" alt=""></a>
+            </div>
+            <div class="header-inner">
+                <h1><span>猫のダーニング刺繍</span><br>よこなみ工房</h1>
+                <ul class="sns">
+                    <li><a href="https://www.instagram.com/yokonami_darning_/" target="_blank"><img src="../img/instagram.svg" alt=""></a></li>
+                    <li><a href="https://minne.com/@yokonami3/profile"><p>Minne</p></a></li>
+                </ul>
+            </div><!-- .header-inner -->
+        </div><!-- .header-box -->
+        <p class="hamburger hamburger--collapse" id="btn">
+            <!-- スペース入れて二つ目のclass名前をサイトから拾ってコピーしてくる -->
+            <!-- スペース入れて三つ目のclass名前をis-activeにする -->
+            <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+            </span>
+        </p>
+    </header>
+
+    <nav id="g-nav">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Links</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="particle">
+    <div id="particles-js"></div><!-- #particles-js -->
+    <div class="particle-box">
+        <div class="gallery">
+            <div class="gallery-box">
+                <h2>Gallery</h2>
+                
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <footer>
+        <p><small>&copy; 2023 Yokonami-Cobo</small></p>
+    </footer>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/vegas.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script>
+        $(function(){
+            $('#main-visual').vegas({/* ここにjsをかけたい要素を入れる */
+            slides: [/* 配列の[] */
+                { src: "img/main-1.png" },/* ←カンマは続くという意味  *//* ここに出したい画像を指定 */
+                { src: "img/main-2.png" },
+                { src: "img/main-3.PNG"},
+
+            ],/* カンマを入れてオプションを追加する */
+            // transition: ['blur','zoomIn','burn'], /* 追加したオプション ランダムで使われる */カンマをいれてアニメーションのオプションも追加
+            animation: 'kenburns',
+            delay: 4000, /* 画像の表示時間 */
+            /* overlay: 'img/overlays/03.png', */
+            timer: false,
+            });
+
+            $('#btn').on('click',function(){            //命令はid名でを指定
+                $(this).toggleClass('is-active');
+                $('#g-nav').toggleClass('move');
+            });
+
+        });
+    </script>
+
+</body>
+</html>

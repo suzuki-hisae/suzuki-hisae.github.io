@@ -10,19 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/vegas.css">
     <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel=”icon” href=“img/favicon.ico”>
 </head>
 <body>
     <header>
         <div class="header-box">
-        <h1><span>猫のダーニング刺繍</span><br>よこなみ工房</h1>
-        <div class="logo">
-            <a href="#"><img src="img/logo.JPG" alt=""></a>
-        </div>
-        <ul class="sns">
-            <li><a href="https://www.instagram.com/yokonami_darning_/" target="_blank"><img src="img/instagram.svg" alt=""></a></li>
-            <li><a href="#"><img src="img/x-twitter.svg" alt=""></a></li>
-        </ul>
-        </div>
+            <div class="logo">
+                <a href="#"><img src="img/logo.JPG" alt=""></a>
+            </div>
+            <div class="header-inner">
+                <h1><span>猫のダーニング刺繍</span><br>よこなみ工房</h1>
+                <ul class="sns">
+                    <li><a href="https://www.instagram.com/yokonami_darning_/" target="_blank"><img src="img/instagram.svg" alt=""></a></li>
+                    <li><a href="https://minne.com/@yokonami3/profile"><p>Minne</p></a></li>
+                </ul>
+            </div><!-- .header-inner -->
+        </div><!-- .header-box -->
         <p class="hamburger hamburger--collapse" id="btn">
             <!-- スペース入れて二つ目のclass名前をサイトから拾ってコピーしてくる -->
             <!-- スペース入れて三つ目のclass名前をis-activeにする -->
@@ -68,7 +71,7 @@
 
 
     <div class="item-wrapper">
-        <h3>新作 NEWitem</h3>
+        <h2>新作 NEWitem</h2>
         <div class="item-contents">
         <div class="item">
             <div class="item-text">
@@ -100,12 +103,14 @@
         </div><!-- .item-contents -->
     </div><!-- .item-wrapper -->
     <div class="video-wrapper">
-        <h3>制作風景</h3>
-        <video src="img/video.mov" autoplay muted loop playsinline></video>
+        <h2>制作風景</h2>
+        <p><video src="img/video.mov" autoplay muted loop playsinline></video></p>
 
     </div>
         
     </div><!-- .particle-box -->
+
+    
 </section>
 
 
@@ -123,16 +128,16 @@
         $(function(){
             $('#main-visual').vegas({/* ここにjsをかけたい要素を入れる */
             slides: [/* 配列の[] */
-                { src: "img/main-1.PNG" },/* ←カンマは続くという意味  *//* ここに出したい画像を指定 */
-                { src: "img/main-2.PNG" },
+                { src: "img/main-1.png" },/* ←カンマは続くという意味  *//* ここに出したい画像を指定 */
+                { src: "img/main-2.png" },
                 { src: "img/main-3.PNG"},
 
             ],/* カンマを入れてオプションを追加する */
             // transition: ['blur','zoomIn','burn'], /* 追加したオプション ランダムで使われる */カンマをいれてアニメーションのオプションも追加
             animation: 'kenburns',
             delay: 4000, /* 画像の表示時間 */
-            timer: false,
             /* overlay: 'img/overlays/03.png', */
+            timer: false,
             });
 
             $('#btn').on('click',function(){            //命令はid名でを指定

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuzukiHisaePortfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <style>
+        /* タイムラインで上書きしたいスタイル */
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: sans-serif;
+            color: #333;
+            .cd-timeline{
+                background-color: #FFF;
+            }
+            .cd-timeline__img--picture{
+                background-color: #c6fcf3;
+                >img{
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
+        header{
+            margin-bottom: 200px;
+        }
+        section{
+            margin-bottom: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Suzuki <br> Hisae <br><span>Portfolio</span></h1>
+        <p class="tag-line">Created:December 2023</p>
+        <p class="hamburger hamburger--collapse" id="btn">
+            <!-- スペース入れて二つ目のclass名前をサイトから拾ってコピーしてくる -->
+            <!-- スペース入れて三つ目のclass名前をis-activeにする -->
+            <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+            </span>
+        </p>
+    </header>
+    <nav class="g-nav">
+        <p><a href="#">SuzukiHisae <br>Portfolio</a></p>
+        <ul id="gl-nav">
+            <li><a href="#about">about</a></li>
+            <li><a href="#my-site">works</a></li>
+            <li><a href="#skill">skill</a></li>
+            <li><a href="#code-pen-wrapper">codepen</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>about</h2>
+            <div class="about-box">
+                <h3>Career <span>- 経歴 -</span></h3>
+                <ul class="timeline">
+                    <li>
+                      <p class="timeline-date">1995年3月</p>
+                      <div class="timeline-content">
+                        <h3>大阪芸術大学 芸術学部 音楽工学専攻 卒業</h3>
+                        <p>卒業制作テーマ「中央アジアの音楽とDTMと映像の融合」</p>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="timeline-date">1995年4月</p>
+                      <div class="timeline-content">
+                        <h3>ドコモ・エンジニアリング関西株式会社（派遣社員）</h3>
+                        <p>関西圏のドコモショップから集められた修理対象の携帯を修理区分ごとに分配</p>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="timeline-date">2001年4月</p>
+                      <div class="timeline-content">
+                        <h3>新菱冷熱工業株式会社（派遣社員）</h3>
+                        <p>autocadや設備CADで設計図及び施工図作成 <br>
+                            施工要領書作成や工数集計などの現場事務</p>
+                      </div>
+                    </li>
+                    <li>
+                        <p class="timeline-date">2004年4月</p>
+                        <div class="timeline-content">
+                          <h3>株式会社健勝苑（派遣社員）</h3>
+                          <p>買い付けた宝飾品の検品 <br>
+                            販売店との調達業務</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="timeline-date">2006年4月</p>
+                        <div class="timeline-content">
+                          <h3>有限会社デュース（契約社員）</h3>
+                          <p>新築マンションのパンフレットに掲載するための間取り図、平面図、敷地図、立面図、設備図の作成</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="timeline-date">2009年9月</p>
+                        <div class="timeline-content">
+                          <h3>フロイント産業株式会社（正社員）</h3>
+                          <p>製造機械の設計及び施工サポート<br>
+                            技術標準化<br>
+                            社内ポータルサイト構築<br>
+                            3DCAD導入<br>
+                            基幹システム構築</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="timeline-date">2023年5月</p>
+                        <div class="timeline-content">
+                        <h3>職業訓練校にてweb制作科受講</h3>
+                        <p>HTML,css,Javascript,jquery,PHP,サーバー設定,Wordpress 等、web制作に必要な技術を学ぶ</p>
+                    </div>
+                    </li>
+                  </ul>
+            </div><!-- .about-box -->
+
+            <div class="about-box">
+                <h3>Characteristic <span>- 特性 -</span></h3>
+                <div class="chara">
+                    <h3>不具合を解消する</h3>
+                    <p>仕事を日々こなす上での不満・不都合・不透明な事象を解消するのが得意です。<br>
+                        例えば、どのデータが正解かわからないといったような状況に対して<br>
+                        まずは過去の納入した実績を調べ<br>
+                        そのデータの過去平均値を分析し研究所の方に確認してもらうという手順で根拠を作り<br>
+                        周知をして、会社としての正しいデータを蓄積するということをしてきました。
+                    </p>
+                </div>
+
+                <div class="chara">
+                    <h3>他部署との連携をする</h3>
+                    <p>上記のような不具合を解消するには、所属する部署だけでは不可能でしたので<br>
+                        日ごろから他部署の方とコミュニケーションをとって気軽な関係を作っていました。<br>
+                        もちろん、こちらからお願いするだけで終わるのではなく、雑用を引き受けたり<br>
+                        人とのつなぎをしたり、持ちつ持たれつの関係で心地よく仕事が引き受けられるように<br>
+                        自然と関りを持つことができました。
+                    </p>
+                </div>
+
+            </div><!-- .about-box -->
+
+            <div class="about-box">
+                <h3>Why WEB? <span>- なぜWEB業界に転身したいか -</span></h3>
+                <div class="why-box">
+                    <p>前職でわかりやすい情報を用い最適な提案をして購入いただく楽しさを知る</p>
+                    <p><img src="img/yjirushi.svg" alt=""></p>
+                    <p>ハンドメイド作家さんと出会い、売ることの難しさを知る</p>
+                    <p><img src="img/yjirushi.svg" alt=""></p>
+                    <p>保護猫コミュニティに参加して、知ってもらうことの大切さを知る</p>
+                </div>
+                <div class="why-box2">
+                    <p><img src="img/light.svg" alt=""></p>
+                    <p>WEB業界で提供できる？<br>そんな仕事に携わりたい</p>
+                </div>
+
+            </div><!-- .about-box -->
+        </section>
+
+        <section id="my-site">
+            <h2>works</h2>
+            <div class="my-site-box">
+                <h3>クライアントワーク</h3>
+                <div class="my-site-wrapper">
+                    <div class="my-site-info">
+                        <h4>ダーニング刺繡｜よこなみ工房（実装）</h4>
+                        <p>概要：ハンドメイド作家さんの作品サイト</p>
+                        <p>特徴：販売サイト（Minne）へ誘導するためのサイト</p>
+                        <p>制作時間：40時間</p>
+                        <p>作業内容：企画、デザイン、コーディング、サーバー設定</p>
+                        <p>使用技術：Photoshop、Figma、HTML、SASS、Javascript、jQuery</p>
+                        <p class="view-more"><a href="my-site/my-site1.html">Go to Site!</a></p>
+                    </div><!-- .my-site-info -->
+                    <div class="capture"><!-- 画像のサイズをコントロールしやすいようにimgをdivに入れる -->
+                        <a href="my-site/my-site1.html"><img src="img/site-1.jpg" alt=""></a>
+                    </div>
+                </div><!-- .my-site-wrapper -->
+
+                <div class="my-site-wrapper">
+                    <div class="my-site-info">
+                        <h4>マッサージ鍼灸治療院｜板井堂（仮想サイト）</h4>
+                        <p>概要：川越駅周辺で開店する鍼灸院のサイト</p>
+                        <p>特徴：クライアントの要望や調査、分析を反映したサイト</p>
+                        <p>制作時間：30時間</p>
+                        <p>作業内容：企画、デザイン、コーディング</p>
+                        <p>使用技術：Figma、HTML、SASS、Javascript、jQuery、Canva</p>
+                        <p class="view-more"><a href="my-site/my-site1.html">Go to Site!</a></p>
+                    </div><!-- .my-site-info -->
+                    <div class="capture"><!-- 画像のサイズをコントロールしやすいようにimgをdivに入れる -->
+                        <a href="my-site/my-site1.html"><img src="img/site-2.jpg" alt=""></a>
+                    </div>
+                </div><!-- .my-site-wrapper -->
+            </div><!-- .my-site-box -->
+
+            <div class="my-site-box">
+                <h3>学校で制作したサイト</h3>
+                <div class="my-site-wrapper">
+                    <div class="my-site-info">
+                        <h4>コーポレートサイト</h4>
+                        <p>概要：Wordpressに対応したコーポレートサイト</p>
+                        <p>特徴：PHPでwpデータ取得、お問い合わせフォームプラグイン実装</p>
+                        <p>制作時間：65時間</p>
+                        <p>作業内容：コーディング、サーバー設定、Wordpress化、お問い合わせフォーム</p>
+                        <p>使用技術：Photoshop、HTML、SASS、Javascript、jQuery、xampp、PHP、Wordpress</p>
+                        <p class="view-more"><a href="my-site/my-site1.html">Go to Site!</a></p>
+                    </div><!-- .my-site-info -->
+                    <div class="capture"><!-- 画像のサイズをコントロールしやすいようにimgをdivに入れる -->
+                        <a href="my-site/my-site1.html"><img src="img/site-3.jpg" alt=""></a>
+                    </div>
+                </div><!-- .my-site-wrapper -->
+
+                <div class="my-site-wrapper">
+                    <div class="my-site-info">
+                        <h4>ECサイト</h4>
+                        <p>概要：サブスクコースを提供しているスイーツショップ</p>
+                        <p>特徴：jQueryやSASSで色々な見せ方を試したサイト</p>
+                        <p>制作時間：50時間</p>
+                        <p>作業内容：コーディング、サーバー設定、申し込みフォーム</p>
+                        <p>使用技術：Photoshop、HTML、SASS、Javascript、jQuery、xampp、PHP、Wordpress</p>
+                        <p class="view-more"><a href="my-site/my-site1.html">Go to Site!</a></p>
+                    </div><!-- .my-site-info -->
+                    <div class="capture"><!-- 画像のサイズをコントロールしやすいようにimgをdivに入れる -->
+                        <a href="my-site/my-site1.html"><img src="img/site-4.jpg" alt=""></a>
+                    </div>
+                </div><!-- .my-site-wrapper -->
+            </div><!-- .my-site-box -->
+    
+            <div class="my-site-box">
+                <h3>学校で制作したバナー</h3>
+                <div class="works-wrapper">
+                    <div class="works-box">
+                        <a href="javascript:;" data-fancybox data-type="ajax" data-src="works-text/works-text1.html">
+                            <h3>猫のダーニング刺繍 よこなみ工房様のバナー</h3>
+                            <p><img src="img/pc-1.jpg" alt=""></p>
+                        </a>
+                    </div><!-- .works-box -->
+                    <div class="works-box">
+                        <a href="javascript:;" data-fancybox data-type="ajax" data-src="works-text/works-text2.html">
+                            <h3>架空サイト マッサージ鍼灸治療院 板井堂のバナー</h3>
+                            <p><img src="img/pc-2.jpg" alt=""></p>
+                        </a>
+                    </div><!-- .works-box -->
+                    <div class="works-box">
+                        <a href="javascript:;" data-fancybox data-type="ajax" data-src="works-text/works-text3.html">
+                            <h3>転職サイト ビズリーチ様のバナー</h3>
+                            <p><img src="img/pc-3.jpg" alt=""></p>
+                        </a>
+                    </div><!-- .works-box -->
+                    <div class="works-box">
+                        <a href="javascript:;" data-fancybox data-type="ajax" data-src="works-text/works-text4.html">
+                            <h3>株式会社ユリ電気商会様のバナー</h3>
+                            <p><img src="img/pc-4.jpg" alt=""></p>
+                        </a>
+                    </div><!-- .works-box -->
+                    <div class="works-box">
+                        <a href="javascript:;" data-fancybox data-type="ajax" data-src="works-text/works-text5.html">
+                            <h3>架空サイト YogaStudioのバナー</h3>
+                            <p><img src="img/banner2.gif" alt=""></p>
+                        </a>
+                    </div><!-- .works-box -->
+                    <div class="works-box">
+<!--                         <a href="javascript:;" data-fancybox data-type="ajax" data-src="works-text/works-text.html">
+                            <h3>作品のタイトル6</h3>
+                            <p><img src="img/site-2.jpg" alt=""></p>
+                        </a> -->
+                    </div><!-- .works-box -->
+                </div><!-- .works-wrapper -->
+            </div><!-- .my-site-box -->
+
+        </section><!-- my-site -->
+
+        <section id="skill">
+            <h2>skill</h2>
+            <table class="skill-sheet">
+                <tr><th>カテゴリー</th><th>習得内容</th></tr>
+                <tr><th rowspan="2">HTML</th><td>HTML Living Standardの使用に基づいたマークアップ</td></tr>
+                <tr><td>適切な見出しの設定</td></tr>
+                <tr><th rowspan="3">CSS</th><td>cssでネストを使った記述</td></tr>
+                <tr><td>cssの拡張言語であるsassを使ったコーディング</td></tr>
+                <tr><td>「can I use」等を利用して各ブラウザの対応状況を確認</td></tr>
+                <tr><th rowspan="2">jQuery</th><td>date関数を使って時間や日時の表示</td></tr>
+                <tr><td>変数や関数（forやif）などプログラム全般で必要とされる基本的な考え方を習得</td></tr>
+                <tr><th rowspan="3">PHP</th><td>postとgetでのデータ送信</td></tr>
+                <tr><td>ユーザビリティの優れたフォーム作成</td></tr>
+                <tr><td>xammp/mampを使った仮想サーバーの構築</td></tr>
+                <tr><th rowspan="3">Wordpress</th><td>オリジナルテーマの作成</td></tr>
+                <tr><td>カスタムフィールドを使ったデータ取得</td></tr>
+                <tr><td>外部記事データの読み込み</td></tr>
+                <tr><th rowspan="2">Git</th><td>リポジトリとクローンデータの作成</td></tr>
+                <tr><td>ステージング、コミット、プッシュ、プルの使い方</td></tr>
+                <tr><th rowspan="3">Photoshop</th><td>デバイス毎のサイズでバナーを作成</td></tr>
+                <tr><td>要件定義に沿ったワイヤーフレーム、カンプデータの作成</td></tr>
+                <tr><td>様々なツールを使った画像加工や補正</td></tr>
+                <tr><th rowspan="1">Figma</th><td>要件定義に沿ったワイヤーフレーム、カンプデータの作成</td></tr>
+                <tr><th rowspan="2">Canva</th><td>ロゴの作成</td></tr>
+                <tr><td>デバイス毎のサイズでバナーを作成</td></tr>
+
+            </table>
+
+        </section><!-- skill -->
+
+        <section id="code-pen-wrapper">
+            <h2>CodePen</h2>
+            <div class="coepen-pen-box">
+                <h3>ハンバーガーボタン（2本線 jQuery）</h3>
+                <p>cssのtransformとjQueryを連動させたハイブリッドアニメーション</p>
+                <div class="code-pen-inner">
+                    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="oNmvGey" data-preview="true" data-user="ihykazek-the-sans" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                        <span>See the Pen <a href="https://codepen.io/ihykazek-the-sans/pen/oNmvGey">
+                        ハンバーガーボタン（2本線 jQuery）</a> by 鈴木寿枝 (<a href="https://codepen.io/ihykazek-the-sans">@ihykazek-the-sans</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                </div><!-- .code-pen-inner -->
+            </div><!-- .coepen-pen-box -->
+
+            <div class="coepen-pen-box">
+                <h3>cssだけでハンバーガーメニューを作る</h3>
+                <p>javascriptを使わず、HTMLとCSSだけでハンバーガーメニューを動かす</p>
+                <div class="code-pen-inner">
+                    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="bGQXrmL" data-preview="true" data-user="ihykazek-the-sans" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                        <span>See the Pen <a href="https://codepen.io/ihykazek-the-sans/pen/bGQXrmL">
+                        cssだけでハンバーガーメニューを作る</a> by 鈴木寿枝 (<a href="https://codepen.io/ihykazek-the-sans">@ihykazek-the-sans</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                </div><!-- .code-pen-inner -->
+            </div><!-- .coepen-pen-box -->
+
+            <div class="coepen-pen-box">
+                <h3>svgのドローイングアニメーション</h3>
+                <p>svgデータの文字を縁取りしてアニメーションで描くように表示する</p>
+                <div class="code-pen-inner">
+                    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJazJBd" data-preview="true" data-user="ihykazek-the-sans" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                        <span>See the Pen <a href="https://codepen.io/ihykazek-the-sans/pen/OJazJBd">
+                        svgのドローイングアニメーション</a> by 鈴木寿枝 (<a href="https://codepen.io/ihykazek-the-sans">@ihykazek-the-sans</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                </div><!-- .code-pen-inner -->
+            </div><!-- .coepen-pen-box -->
+
+            <div class="coepen-pen-box">
+                <h3>キーフレームアニメーション｜テキスト</h3>
+                <p>CSSで@keyframesを使って文字を下から順番に登場させる</p>
+                <div class="code-pen-inner">
+                    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="YzRYzdv" data-preview="true" data-user="ihykazek-the-sans" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                        <span>See the Pen <a href="https://codepen.io/ihykazek-the-sans/pen/YzRYzdv">
+                        キーフレームアニメーション｜テキスト</a> by 鈴木寿枝 (<a href="https://codepen.io/ihykazek-the-sans">@ihykazek-the-sans</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                </div><!-- .code-pen-inner -->
+            </div><!-- .coepen-pen-box -->
+        </section><!-- code-pen-wrapper -->
+
+    </main>
+    <footer>
+        <p><small>&copy;2023 SuzukiHisae Portfolio</small></p>
+    </footer>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script>
+        $(function(){
+            $('#btn').on('click',function(){            //命令はid名でを指定
+                $(this).toggleClass('is-active');
+                $('#gl-nav').toggleClass('move');
+            });
+        });
+    </script>
+
+</body>
+</html>
