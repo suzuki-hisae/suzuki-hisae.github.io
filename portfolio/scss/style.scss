@@ -264,7 +264,11 @@ section{
             background: linear-gradient(to top, #39D2F8 0%, #306160 100%);
         }
     }
+    @media (max-width:600px){
+        width: 200px;
+    }
 }
+
 
 //works部分
 .works-wrapper{
